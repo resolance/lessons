@@ -46,6 +46,7 @@ public class Main {
                 else{
                     System.out.println("Результат:");
                     for (int i = 0; i < resultList.size(); i++) {
+                        //test comment
                         System.out.println(resultList.get(i));
                     }
                 }
