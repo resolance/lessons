@@ -1,9 +1,16 @@
-package com.company;
+package ru.ezhov.lessons.part01.chapter01.Nickel;
 
-import java.io.Console;
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
+
+/*
+    Реализовать приложение, которое будет гласные буквы делать заглавными, а согласные менять на номера их в алфавите и обратно.
+    Реализовать приложение, которое будет преобразовывать введенный текст в строку без пробелов, и преобразовывать обратно
+
+    Заметки:
+        1. Реализация первой задачи
+        2. Модульность (необходимо сделать работу приложения в разных методах)
+ */
 
 public class Main {
 
@@ -16,37 +23,34 @@ public class Main {
             System.out.println("Введите строку или Е для выхода");
             String strInput = scn.nextLine();
 
-            if (strInput.toLowerCase().equals("e")){
+            if (strInput.toLowerCase().equals("e")) {
                 System.out.println("Работа завершена");
                 break;
             }
 
-            if (strInput.indexOf(" ") != -1){
+            if (strInput.contains(" ")) {
                 System.out.println("Обработка");
                 String strNew = strInput.replace(" ", "");
                 System.out.println(strNew);
 
-                if (spacekList.indexOf(strInput) == -1){
+                if (spacekList.indexOf(strInput) == -1) {
                     spacekList.add(strInput);
                     notSpaceList.add(strNew);
                 }
-            }
-            else {
+            } else {
                 System.out.println("Поиск");
                 ArrayList<String> resultList = new ArrayList<String>();
                 for (int i = 0; i < notSpaceList.size(); i++) {
-                    if (notSpaceList.get(i).equals(strInput)){
+                    if (notSpaceList.get(i).equals(strInput)) {
                         resultList.add(spacekList.get(i));
                     }
                 }
 
-                if (resultList.isEmpty()){
+                if (resultList.isEmpty()) {
                     System.out.println("Результат: Строки не найдены");
-                }
-                else{
+                } else {
                     System.out.println("Результат:");
                     for (int i = 0; i < resultList.size(); i++) {
-                        //test comment
                         System.out.println(resultList.get(i));
                     }
                 }
@@ -55,4 +59,3 @@ public class Main {
         }
     }
 }
-//
