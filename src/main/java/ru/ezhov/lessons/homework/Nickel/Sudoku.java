@@ -1,10 +1,12 @@
-package com.company;
+package ru.ezhov.lessons.homework.Nickel;
 
 import java.util.Scanner;
 import java.util.Random;
 
+//1. Необходимо сделать возможность использовать разные реализации формирования полей
+//2. Уйти от использования статических методов
 
-public class Main {
+public class Sudoku {
 
     public static void main(String[] args) {
         // write your code here
@@ -70,5 +72,4 @@ public class Main {
 
         return idx;
     }
-
 }

@@ -1,4 +1,4 @@
-package ru.ezhov.lessons.part01.chapter01.Nickel;
+package ru.ezhov.lessons.homework.Nickel;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -12,7 +12,7 @@ import java.util.Scanner;
         2. Модульность (необходимо сделать работу приложения в разных методах)
  */
 
-public class Main {
+public class Parser {
 
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
