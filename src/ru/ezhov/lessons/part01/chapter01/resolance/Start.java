@@ -1,4 +1,4 @@
-package ru.ezhov.lessons.part01.chapter01.resolance.;
+package ru.ezhov.lessons.part01.chapter01.resolance;
 /**
  * Created by res on 19.07.2017.
  */
