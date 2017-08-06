@@ -1,5 +1,7 @@
 package ru.ezhov.lessons.homework.suvorov_vm.Glava1;
 
+import com.sun.org.apache.xpath.internal.SourceTree;
+
 import java.util.Scanner;
 
 public class Var1_2 {
@@ -8,6 +10,7 @@ public class Var1_2 {
         Scanner scan = new Scanner(System.in);
         String slovo = scan.next();
         breakSumbols(slovo);
+        System.out.println(obratnoeSlovo);
 
     }
 
@@ -17,7 +20,7 @@ public class Var1_2 {
         ChSlovo.coup();
     }
 
-    public String coup (char[] sumbols)
+    public static String coup (char[] sumbols)
     {
         String obratnoeSlovo = "";
         for(int i = sumbols.length-1; i>sumbols[0]; i--)
