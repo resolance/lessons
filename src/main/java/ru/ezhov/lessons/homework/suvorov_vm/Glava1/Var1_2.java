@@ -9,16 +9,16 @@ public class Var1_2 {
         System.out.println("Введите значение строки, которое нужно написать в обратном порядке");
         Scanner scan = new Scanner(System.in);
         String slovo = scan.next();
-        breakSumbols(slovo);
-        System.out.println(obratnoeSlovo);
+        String s =  breakSumbols(slovo);
+        System.out.println(s);
 
     }
 
-    public static void breakSumbols(String slovo)
-    {
-        char[] ChSlovo = slovo.toCharArray();
-        ChSlovo.coup();
+    public static String breakSumbols(String slovo) {
+        char[] chSlovo = slovo.toCharArray();
+        return coup(chSlovo);
     }
+
 
     public static String coup (char[] sumbols)
     {

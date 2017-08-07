@@ -9,13 +9,13 @@ public class Var1_4 {
         String pass = scan.next();
         String rootPass = "root";
 
-        avtorizacia(pass, rootPass);
+        authorization(pass, rootPass);
 
     }
 
-    private static void avtorizacia(String pass, rootPass)
+    private static void authorization(String pass, String rootPass)
     {
-        if (pass.equals(rootPass) == true)
+        if (pass.equals(rootPass))
         {
             System.out.println("Пароли верны, вход в систему");
         }
