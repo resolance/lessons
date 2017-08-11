@@ -1,6 +1,4 @@
-package ru.ezhov.lessons.homework.suvorov_vm.Glava1;
-
-import java.util.Scanner;
+package ru.ezhov.lessons.homework.ezhov.var;
 
 
 //1. Сделать возможным тестирование
