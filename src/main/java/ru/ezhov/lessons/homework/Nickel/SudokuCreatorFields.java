@@ -1,13 +1,14 @@
 package ru.ezhov.lessons.homework.Nickel;
 
-public class SudokuCreatorFilelds implements Sudoku {
+public class SudokuCreatorFields implements Sudoku {
 
     private final int countFields;
 
-    public SudokuCreatorFilelds(int countFields) {
+    public SudokuCreatorFields(int countFields) {
         this.countFields = countFields;
     }
 
+    @Override
     public int[][] build() {
         return new int[][]{
                 {
