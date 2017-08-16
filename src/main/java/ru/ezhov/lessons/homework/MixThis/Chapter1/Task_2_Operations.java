@@ -208,4 +208,110 @@ public class Task_2_Operations {
                 + sortNumbersWithDescByValue(map));
     }
 
+    public void calculateHappyNumbers(Integer[] arrayNumbersObj) {
+        String numberString;
+        List<Integer> arrayHappyNumbersList = new ArrayList<Integer>();
+
+        for (Integer arrayNumber : arrayNumbersObj) {
+            numberString = arrayNumber.toString();
+            int sumFirstHalf = 0;
+            int sumSecondHalf = 0;
+            int elementHalfSize;
+
+            if (numberString.length() % 2 == 0) {
+                elementHalfSize = numberString.length() / 2;
+                for (int i = 0; i < elementHalfSize; i++) {
+                    sumFirstHalf = sumFirstHalf + Character.getNumericValue(numberString.charAt(i));
+                }
+
+                for (int i = elementHalfSize; i < numberString.length(); i++) {
+                    sumSecondHalf = sumSecondHalf + Character.getNumericValue(numberString.charAt(i));
+                }
+            }
+
+            if (sumFirstHalf == sumSecondHalf) {
+                arrayHappyNumbersList.add(arrayNumber);
+            }
+        }
+
+        System.out.println("Счастливые числа: " + arrayHappyNumbersList);
+    }
+
+    public void calculateFibonacciNumbers(Integer[] arrayNumbersObj) {
+        List<Integer> arrayFibonacciNumbersList = new ArrayList<Integer>();
+
+        try {
+            if (arrayNumbersObj[0] == 1) {
+                arrayFibonacciNumbersList.add(arrayNumbersObj[0]);
+            }
+            if (arrayNumbersObj[1] == 1) {
+                arrayFibonacciNumbersList.add(arrayNumbersObj[1]);
+            }
+            if (arrayNumbersObj.length > 2) {
+                for (int i = 2; i < arrayNumbersObj.length; i++) {
+
+                    if (arrayNumbersObj[i] == arrayNumbersObj[i - 1] + arrayNumbersObj[i - 2]) {
+                        arrayFibonacciNumbersList.add(arrayNumbersObj[i]);
+                    }
+                }
+            }
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("Массив из такого количества элементов, ты серьезно?");
+        }
+        System.out.println("Числа Фибоначчи: " + arrayFibonacciNumbersList);
+    }
+
+    public void calculatePalindromNumbers(Integer[] arrayNumbersObj) {
+        List<StringBuilder> arrayPalindromNumbersList = new ArrayList<StringBuilder>();
+        for (Integer arrayNumber : arrayNumbersObj) {
+            StringBuilder arrayNumberString = new StringBuilder(arrayNumber.toString());
+            if (arrayNumberString.toString().equals(arrayNumberString.reverse().toString())) {
+                arrayPalindromNumbersList.add(arrayNumberString);
+            }
+        }
+        System.out.println("Числа-палиндромы: " + arrayPalindromNumbersList);
+    }
+
+    public void calculateNumbersHalfSumNeighbors(Integer[] arrayNumbersObj) {
+        List<Integer> arrayHalfSumNeighbors = new ArrayList<Integer>();
+        for (int i = 1; i < arrayNumbersObj.length - 1; i++) {
+            if (arrayNumbersObj[i] == (arrayNumbersObj[i - 1] + arrayNumbersObj[i + 1]) / 2) {
+                arrayHalfSumNeighbors.add(arrayNumbersObj[i]);
+            }
+        }
+        System.out.println("Элементы, которые равны полусумме соседних элементов: " + arrayHalfSumNeighbors);
+    }
+
+    public void calculatePascalTriangleForFirstPositiveNumber(Integer[] arrayNumbersObj) {
+        List<Integer> arrayPositiveNumbers = new ArrayList<Integer>();
+        for (Integer arrayNumbers : arrayNumbersObj) {
+            if (arrayNumbers >= 0) {
+                arrayPositiveNumbers.add(arrayNumbers);
+            }
+        }
+
+        System.out.println("Введите количество уровней треугольника и нажмите <Enter>: ");
+        Scanner pascalTriangleScanner = new Scanner(System.in);
+
+        int pascalTriangleSize = 0;
+
+        try {
+            pascalTriangleSize = Integer.parseInt(pascalTriangleScanner.next());
+        } catch (NumberFormatException e) {
+            System.out.println("Введите корректные данные.");
+        }
+
+        int arrayFirstPositiveNumber = arrayPositiveNumbers.get(0);
+
+        for (int y = 0; y < pascalTriangleSize; y++) {
+            int c = arrayFirstPositiveNumber;
+
+            for (int x = 0; x <= y; x++) {
+                System.out.print(c + " ");
+                c = c * (y - x) / (x + 1);
+            }
+            System.out.println();
+        }
+    }
+
 }

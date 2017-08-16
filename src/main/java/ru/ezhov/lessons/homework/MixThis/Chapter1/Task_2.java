@@ -68,6 +68,24 @@ public class Task_2 {
         //10) Числа в порядке убывания частоты встречаемости чисел.
         operations.calculateNumbersFrequencyByDesc(arrayNumbersObj);
 
+        //11) «Счастливые» числа.
+        operations.calculateHappyNumbers(arrayNumbersObj);
+
+        //12) Числа Фибоначчи: f0 = f1 = 1, f (n) = f (n–1) + f (n–2).
+        operations.calculateFibonacciNumbers(arrayNumbersObj);
+
+        //13) Числа-палиндромы, значения которых в прямом и обратном порядке совпадают.
+        operations.calculatePalindromNumbers(arrayNumbersObj);
+
+        //14) Элементы, которые равны полусумме соседних элементов.
+        operations.calculateNumbersHalfSumNeighbors(arrayNumbersObj);
+
+        //15) Период десятичной дроби p = m/n для первых двух целых положительных чисел n и m, расположенных подряд.
+        //В работе
+
+        //16) Построить треугольник Паскаля для первого положительного числа.
+        operations.calculatePascalTriangleForFirstPositiveNumber(arrayNumbersObj);
+
     }
 
 }
