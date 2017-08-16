@@ -81,7 +81,7 @@ public class Task_2 {
         operations.calculateNumbersHalfSumNeighbors(arrayNumbersObj);
 
         //15) Период десятичной дроби p = m/n для первых двух целых положительных чисел n и m, расположенных подряд.
-        //В работе
+        //В работе.
 
         //16) Построить треугольник Паскаля для первого положительного числа.
         operations.calculatePascalTriangleForFirstPositiveNumber(arrayNumbersObj);
