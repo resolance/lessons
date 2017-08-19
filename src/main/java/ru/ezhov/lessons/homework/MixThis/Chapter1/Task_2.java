@@ -29,7 +29,7 @@ public class Task_2 {
             System.out.println("Введите корректные данные.");
         }
 
-        Task7Operations operations = new Task7Operations();
+        Task_2_Operations operations = new Task_2_Operations();
 
         //1) Четные и нечетные числа.
         operations.calculateEvenAndOddNumbers(arrayNumbers);
