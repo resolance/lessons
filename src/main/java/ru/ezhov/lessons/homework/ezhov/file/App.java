@@ -18,6 +18,7 @@ public class App {
         Processor processor = new StringProcessor();
         System.out.println(processor.process("test"));
 
+            Object o = new Object();
 
 
 
