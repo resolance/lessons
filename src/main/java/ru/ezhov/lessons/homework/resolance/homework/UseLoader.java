@@ -5,7 +5,7 @@ public class UseLoader implements Loader {
 
     @Override
     public void load(String string) {
-        this.load("Check load");
+        System.out.println(string);
     }
 
     /*public UseLoader(final Loader loader) {
