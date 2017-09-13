@@ -19,10 +19,9 @@ public class Theory {
             public String getModel(){return model;}
             public void setModel(String model){this.model = model;}
             public int getMass() {return mass;}
-            public void setMass(int mass) {this.mass = mass;}
+            public int getMassShip() {return Ship.this.mass;}
+            public void setMass(int mass) {this.mass = mass; Ship.this.mass = 700;}
             //Если попробовать не через сеттеры ??
-
-
         } // конец объявления внутреннего класса
     // методы внешнего класса
         public class Modifyer{
@@ -57,6 +56,7 @@ class Ship {
         System.out.println("Масса корабля: " + ref1.getMass()+ "  " +" Модель: " +ref1.getModel());
         ref1.setMass(100);
         ref1.setModel("Corsar");
+        System.out.println("Масса корабля SHEP: " + ref1.getMassShip()+ "  " +" Модель: " +ref1.getModel());
         System.out.println("Масса корабля: " + ref1.getMass()+ "  " +" Модель: " +ref1.getModel());
 
         //Если попробовать не через сеттеры ??
