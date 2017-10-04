@@ -1,4 +1,4 @@
-package ru.ezhov.lessons.homework.resolance.homework.JAXB.self.Book;
+package ru.ezhov.lessons.homework.resolance.homework.XML.JAXB.Book;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
@@ -12,10 +12,10 @@ public class MarshallerXml {
             JAXBContext context = JAXBContext.newInstance(WorkerBook.class);
             Marshaller marsh = context.createMarshaller();
             marsh.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
+            marsh.setProperty(Marshaller.JAXB_ENCODING, "UTF-8");
 
             //создаем воркера
             WorkerBook workerBook = new WorkerBook("Kostayn", "M", 30, "Mr.President");
-
             //вывоодим его в консоль и в файл
             marsh.marshal(workerBook, new FileOutputStream("./WorkerBook.xml"));
             marsh.marshal(workerBook,System.out);

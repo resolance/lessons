@@ -1,4 +1,4 @@
-package ru.ezhov.lessons.homework.resolance.homework.JAXB.self.Book;
+package ru.ezhov.lessons.homework.resolance.homework.XML.JAXB.Book;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
@@ -23,3 +23,5 @@ public class UnmarshallerXML {
         }
     }
 }
+
+

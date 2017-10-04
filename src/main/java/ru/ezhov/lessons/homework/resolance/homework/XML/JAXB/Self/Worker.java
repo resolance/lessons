@@ -1,4 +1,4 @@
-package ru.ezhov.lessons.homework.resolance.homework.JAXB.self.Self;
+package ru.ezhov.lessons.homework.resolance.homework.XML.JAXB.Self;
 
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
